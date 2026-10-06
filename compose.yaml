@@ -1,0 +1,7 @@
+services:
+  web:
+    image: ${GHCR_IMAGE:-ghcr.io/spartancat02/nettside:latest}
+    pull_policy: always
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    restart: unless-stopped
