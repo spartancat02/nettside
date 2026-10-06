@@ -3,27 +3,42 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Website Homepage</title>
+        <title>Bordtennis score</title>
         <!-- This line connects your CSS stylesheet -->
-        <link href="./src/output.css" rel="stylesheet">
+        <link href="./src/output.css" rel="stylesheet" />
+        <script src="script.js" defer></script>
     </head>
     <body>
-        <h1>Welcome to My Website :)</h1>
-        <div class="bg">
-            <h1 class="red">Welcome to My Website2 :)</h1>
+        <div
+            class="flex h-svh gap-2 bg-black select-none"
+            ondragstart="return false;"
+            oncontextmenu="return false;"
+        >
+            <div
+                id="p1-button"
+                onclick="p1ButtonPressed()"
+                class="flex justify-center items-center grow bg-red-700 hover:bg-red-600"
+            >
+                <button
+                    id="p1-score"
+                    class="text-9xl font-bold shadow-xl shadow-black rounded-2xl p-3 border-white border-5"
+                >
+                    0
+                </button>
+            </div>
 
-            <p class="red">
-                This is the main homepage container loaded from the index.html
-                file.
-            </p>
+            <div
+                id="p2-button"
+                onclick="p2ButtonPressed()"
+                class="flex justify-center items-center grow bg-blue-700 hover:bg-blue-600"
+            >
+                <button
+                    id="p2-score"
+                    class="text-9xl font-bold shadow-xl shadow-black rounded-2xl p-3 border-black border-3"
+                >
+                    0
+                </button>
+            </div>
         </div>
-        <img
-            src="Cat.jpeg"
-            alt="A professional portrait photo of my cat"
-            width="300"
-        />
-        <!-- Link to another page in your folder -->
-        <a href="about.html">Learn more about us</a>
-        <a href="bordtennis.html">Learn more about bordtennis</a>
     </body>
 </html>
