@@ -100,3 +100,23 @@ function displayWinner() {
   player2.className = winnerClass
   console.log("bbbbb")
 }
+
+function resetGame() {
+  score1 = 0;
+  score2 = 0;
+  updateScores();
+}
+
+function p1MinusScore() {
+  if (score1 > 0) {
+    score1 -= 1;
+    updateScores();
+  }
+}
+
+function p2MinusScore() {
+  if (score2 > 0) {
+    score2 -= 1;
+    updateScores();
+  }
+}
