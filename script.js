@@ -33,23 +33,25 @@ function updateScores() {
 //button click 1
 function p1ButtonPressed() {
   console.log("p1 is hit");
-
+  if (getWinner() != 0) {
+    return;
+  }
+  score1 += 1;
+    updateScores();
   if (getWinner() != 0) {
     displayWinner();
-  } else {
-    score1 += 1;
-    updateScores();
   }
 }
 //button click 2
 function p2ButtonPressed() {
   console.log("p2 is hit");
-
+  if (getWinner() != 0) {
+    return;
+  }
+  score2 += 1;
+    updateScores();
   if (getWinner() != 0) {
     displayWinner();
-  } else {
-    score2 += 1;
-    updateScores();
   }
 }
 
@@ -97,8 +99,12 @@ function isDuce() {
 }
 
 function displayWinner() {
-  player2.className = winnerClass
-  console.log("bbbbb")
+  if (getWinner() == 1) {
+    player1.className = winnerClass;
+  } else if (getWinner() == 2) {
+    player2.className = winnerClass;
+  }
+  console.log("Winner decided");
 }
 
 function resetGame() {
